@@ -17,7 +17,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter g5 h830 h850 v20 h910 h918 us996,$(TARGET_DEVICE)),)
+ifneq ($(filter g5 h830 h850 v20 h910 h918 us996 ls997 vs995,$(TARGET_DEVICE)),)
 
 
 ifeq ($(QCPATH),)
@@ -72,6 +72,18 @@ LOCAL_MODULE := libqmiservices
 LOCAL_MODULE_OWNER := lge
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmiservices.so
 LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmiservices.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsdm-disp-apis
+LOCAL_MODULE_OWNER := lge
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libsdm-disp-apis.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libsdm-disp-apis.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -277,9 +289,9 @@ LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := embmslibrary
+LOCAL_MODULE := qcnvitems
 LOCAL_MODULE_OWNER := lge
-LOCAL_SRC_FILES := proprietary/framework/embmslibrary.jar
+LOCAL_SRC_FILES := proprietary/framework/qcnvitems.jar
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
