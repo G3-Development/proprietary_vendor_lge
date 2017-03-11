@@ -692,14 +692,11 @@ PRODUCT_COPY_FILES += \
     vendor/lge/g4-common/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/lge/g4-common/proprietary/framework/qcnvitems.jar:system/framework/qcnvitems.jar \
     vendor/lge/g4-common/proprietary/etc/firmware/cpp_firmware_v1_1_1.fw:system/etc/firmware/cpp_firmware_v1_1_1.fw \
-    vendor/lge/g4-common/proprietary/etc/firmware/fw_bcmdhd_mfg.bin:system/etc/firmware/fw_bcmdhd_mfg.bin \
-    vendor/lge/g4-common/proprietary/etc/firmware/fw_bcmdhd_apsta.bin:system/etc/firmware/fw_bcmdhd_apsta.bin \
     vendor/lge/g4-common/proprietary/etc/firmware/cpp_firmware_v1_2_0.fw:system/etc/firmware/cpp_firmware_v1_2_0.fw \
     vendor/lge/g4-common/proprietary/etc/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     vendor/lge/g4-common/proprietary/etc/firmware/cpp_firmware_v1_1_6.fw:system/etc/firmware/cpp_firmware_v1_1_6.fw \
     vendor/lge/g4-common/proprietary/etc/firmware/cpp_firmware_v1_4_0.fw:system/etc/firmware/cpp_firmware_v1_4_0.fw \
     vendor/lge/g4-common/proprietary/etc/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
-    vendor/lge/g4-common/proprietary/etc/firmware/fw_bcmdhd.bin:system/etc/firmware/fw_bcmdhd.bin \
     vendor/lge/g4-common/proprietary/etc/firmware/cpp_firmware_v1_6_0.fw:system/etc/firmware/cpp_firmware_v1_6_0.fw \
     vendor/lge/g4-common/proprietary/etc/firmware/cpp_firmware_v1_8_0.fw:system/etc/firmware/cpp_firmware_v1_8_0.fw \
     vendor/lge/g4-common/proprietary/etc/xtwifi.conf:system/etc/xtwifi.conf \
@@ -710,7 +707,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/g4-common/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
     vendor/lge/g4-common/proprietary/bin/imsdatadaemon:system/bin/imsdatadaemon \
     vendor/lge/g4-common/proprietary/bin/loc_launcher:system/bin/loc_launcher \
-    vendor/lge/g4-common/proprietary/bin/imswmsproxy:system/bin/imswmsproxy \
     vendor/lge/g4-common/proprietary/bin/irsc_util:system/bin/irsc_util \
     vendor/lge/g4-common/proprietary/bin/qmuxd:system/bin/qmuxd \
     vendor/lge/g4-common/proprietary/bin/btnvtool:system/bin/btnvtool \
@@ -741,4 +737,11 @@ PRODUCT_COPY_FILES += \
     vendor/lge/g4-common/proprietary/vendor/firmware/a420_pfp.fw:system/vendor/firmware/a420_pfp.fw \
     vendor/lge/g4-common/proprietary/vendor/firmware/a420_pm4.fw:system/vendor/firmware/a420_pm4.fw \
     vendor/lge/g4-common/proprietary/vendor/lib/librs.rnr_downscale.so:system/vendor/lib/librs.rnr_downscale.so \
-    vendor/lge/g4-common/proprietary/vendor/lib/librs.rnr_process.so:system/vendor/lib/librs.rnr_process.so
+    vendor/lge/g4-common/proprietary/vendor/lib/librs.rnr_process.so:system/vendor/lib/librs.rnr_process.so \
+    vendor/lge/g4-common/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
+    vendor/lge/g4-common/proprietary/app/ims/lib/arm64/libimscamera_jni.so:system/app/ims/lib/arm64/libimscamera_jni.so \
+    vendor/lge/g4-common/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
+    vendor/lge/g4-common/proprietary/app/ims/lib/arm64/libimsmedia_jni.so:system/app/ims/lib/arm64/libimsmedia_jni.so \
+    vendor/lge/g4-common/proprietary/app/ims/ims.apk:system/app/ims/ims.apk \
+    vendor/lge/g4-common/proprietary/lib/libimscamera_jni.so:system/lib/libimscamera_jni.so \
+    vendor/lge/g4-common/proprietary/lib/libimsmedia_jni.so:system/lib/libimsmedia_jni.so
