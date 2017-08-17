@@ -39,15 +39,16 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/etc/firmware/cpp_firmware_v1_8_0.fw:system/etc/firmware/cpp_firmware_v1_8_0.fw \
     vendor/lge/msm8996-common/proprietary/etc/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     vendor/lge/msm8996-common/proprietary/etc/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
-    vendor/lge/msm8996-common/proprietary/lib/hw/consumerir.msm8996.so:system/lib/hw/consumerir.msm8996.so \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/com.verizon.apn.xml:system/etc/permissions/com.verizon.apn.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/com.verizon.embms.xml:system/etc/permissions/com.verizon.embms.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/com.verizon.provider.xml:system/etc/permissions/com.verizon.provider.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/qti-vzw-ims-internal.xml:system/etc/permissions/qti-vzw-ims-internal.xml \
+    vendor/lge/msm8996-common/proprietary/etc/permissions/vzw_sso_permissions.xml:system/etc/permissions/vzw_sso_permissions.xml \
     vendor/lge/msm8996-common/proprietary/lib/hw/lgkm.default.so:system/lib/hw/lgkm.default.so \
     vendor/lge/msm8996-common/proprietary/lib/hw/lgkm.msm8996.so:system/lib/hw/lgkm.msm8996.so \
-    vendor/lge/msm8996-common/proprietary/lib/libcir_driver.so:system/lib/libcir_driver.so \
     vendor/lge/msm8996-common/proprietary/lib/liblgkm.so:system/lib/liblgkm.so \
-    vendor/lge/msm8996-common/proprietary/lib64/hw/consumerir.msm8996.so:system/lib64/hw/consumerir.msm8996.so \
     vendor/lge/msm8996-common/proprietary/lib64/hw/lgkm.default.so:system/lib64/hw/lgkm.default.so \
     vendor/lge/msm8996-common/proprietary/lib64/hw/lgkm.msm8996.so:system/lib64/hw/lgkm.msm8996.so \
-    vendor/lge/msm8996-common/proprietary/lib64/libcir_driver.so:system/lib64/libcir_driver.so \
     vendor/lge/msm8996-common/proprietary/lib64/liblgkm.so:system/lib64/liblgkm.so \
     vendor/lge/msm8996-common/proprietary/vendor/firmware/image/modem_pr/mcfg/configs/mcfg_hw/generic/common/default/default/mcfg_hw.mbn:system/vendor/firmware/image/modem_pr/mcfg/configs/mcfg_hw/generic/common/default/default/mcfg_hw.mbn \
     vendor/lge/msm8996-common/proprietary/vendor/firmware/image/modem_pr/mcfg/configs/mcfg_hw/generic/common/mdm9x45/ss/mcfg_hw.mbn:system/vendor/firmware/image/modem_pr/mcfg/configs/mcfg_hw/generic/common/mdm9x45/ss/mcfg_hw.mbn \
@@ -66,7 +67,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/na/verizon/hvolte/mcfg_sw.mbn:system/vendor/firmware/image/modem_pr/mcfg/configs/mcfg_sw/generic/na/verizon/hvolte/mcfg_sw.mbn \
     vendor/lge/msm8996-common/proprietary/vendor/firmware/libpn548ad_fw.so:system/vendor/firmware/libpn548ad_fw.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libchromaflash.so:system/vendor/lib/libchromaflash.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libllvd_smore.so:system/vendor/lib/libllvd_smore.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_chromaflash_lib.so:system/vendor/lib/libmmcamera_chromaflash_lib.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_llvd.so:system/vendor/lib/libmmcamera_llvd.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_optizoom_lib.so:system/vendor/lib/libmmcamera_optizoom_lib.so \
@@ -74,14 +74,23 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_trueportrait_lib.so:system/vendor/lib/libmmcamera_trueportrait_lib.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmcamera_ubifocus_lib.so:system/vendor/lib/libmmcamera_ubifocus_lib.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/liboptizoom.so:system/vendor/lib/liboptizoom.so \
-    vendor/lge/msm8996-common/proprietary/vendor/lib/libseemore.so:system/vendor/lib/libseemore.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor_lge_cal.so:system/vendor/lib/libsensor_lge_cal.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libtrueportrait.so:system/vendor/lib/libtrueportrait.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libubifocus.so:system/vendor/lib/libubifocus.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libsensor_lge_cal.so:system/vendor/lib64/libsensor_lge_cal.so
 
 PRODUCT_PACKAGES += \
-    HotwordEnrollment
+    libcir_driver \
+    VZWAPNLib \
+    vzw_msdc_api \
+    HotwordEnrollment \
+    SprintDM \
+    SprintHM \
+    VZWAPNService \
+    VZWAVS \
+    VzwLcSilent \
+    VzwOmaTrigger \
+    VerizonUnifiedSettings
 
 ifeq ($(QCPATH),)
 PRODUCT_COPY_FILES += \
@@ -232,6 +241,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libcne.so:system/vendor/lib/libcne.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libcneapiclient.so:system/vendor/lib/libcneapiclient.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libcneqmiutils.so:system/vendor/lib/libcneqmiutils.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libcppf.so:system/vendor/lib/libcppf.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libdpmctmgr.so:system/vendor/lib/libdpmctmgr.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libdpmfdmgr.so:system/vendor/lib/libdpmfdmgr.so \
@@ -241,6 +251,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libdsutils.so:system/vendor/lib/libdsutils.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libfastcvopt.so:system/vendor/lib/libfastcvopt.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libhdr_tm.so:system/vendor/lib/libhdr_tm.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libidl.so:system/vendor/lib/libidl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libllvm-glnext.so:system/vendor/lib/libllvm-glnext.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
@@ -252,6 +263,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmm-qdcm.so:system/vendor/lib/libmm-qdcm.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmQSM.so:system/vendor/lib/libmmQSM.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libmmosal.so:system/vendor/lib/libmmosal.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/liboemcrypto.so:system/vendor/lib/liboemcrypto.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libperipheral_client.so:system/vendor/lib/libperipheral_client.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libqcci_legacy.so:system/vendor/lib/libqcci_legacy.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libqcmaputils.so:system/vendor/lib/libqcmaputils.so \
@@ -269,6 +281,9 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libsd_sdk_display.so:system/vendor/lib/libsd_sdk_display.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdm-color.so:system/vendor/lib/libsdm-color.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdm-diag.so:system/vendor/lib/libsdm-diag.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libsdmextension.so:system/vendor/lib/libsdmextension.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor1.so:system/vendor/lib/libsensor1.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor_reg.so:system/vendor/lib/libsensor_reg.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libsensor_test.so:system/vendor/lib/libsensor_test.so \
@@ -279,6 +294,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libssd.so:system/vendor/lib/libssd.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphony-1.1.1.so:system/vendor/lib/libsymphony-1.1.1.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libsymphonypower-1.1.1.so:system/vendor/lib/libsymphonypower-1.1.1.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib/libtinyxml2_1.so:system/vendor/lib/libtinyxml2_1.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libvendorconn.so:system/vendor/lib/libvendorconn.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libvpphvx.so:system/vendor/lib/libvpphvx.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib/libvqzip.so:system/vendor/lib/libvqzip.so \
@@ -384,6 +400,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libgdtap.so:system/vendor/lib64/libgdtap.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libgeofence.so:system/vendor/lib64/libgeofence.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libgsl.so:system/vendor/lib64/libgsl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libhdr_tm.so:system/vendor/lib64/libhdr_tm.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libidl.so:system/vendor/lib64/libidl.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libimscamera_jni.so:system/vendor/lib64/libimscamera_jni.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libimsmedia_jni.so:system/vendor/lib64/libimsmedia_jni.so \
@@ -446,6 +463,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libssd.so:system/vendor/lib64/libssd.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libsystem_health_mon.so:system/vendor/lib64/libsystem_health_mon.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libthermalioctl.so:system/vendor/lib64/libthermalioctl.so \
+    vendor/lge/msm8996-common/proprietary/vendor/lib64/libtinyxml2_1.so:system/vendor/lib64/libtinyxml2_1.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libuiblur.so:system/vendor/lib64/libuiblur.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libulp2.so:system/vendor/lib64/libulp2.so \
     vendor/lge/msm8996-common/proprietary/vendor/lib64/libvendorconn.so:system/vendor/lib64/libvendorconn.so \
@@ -465,6 +483,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libloc_api_v02 \
     libdsi_netctrl \
+    libgpustats \
     libqmi_cci \
     libqmi_common_so \
     libqmiservices \

@@ -583,6 +583,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/g6-common/proprietary/vendor/lib/libmmcamera_brcf016gwz_hi553_eeprom.so:system/vendor/lib/libmmcamera_brcf016gwz_hi553_eeprom.so \
     vendor/lge/g6-common/proprietary/vendor/lib/libmmcamera_dbg.so:system/vendor/lib/libmmcamera_dbg.so \
     vendor/lge/g6-common/proprietary/vendor/lib/libmmcamera_dummyalgo.so:system/vendor/lib/libmmcamera_dummyalgo.so \
+    vendor/lge/g6-common/proprietary/vendor/lib/libmmcamera_edgesmooth_lib.so:system/vendor/lib/libmmcamera_edgesmooth_lib.so \
     vendor/lge/g6-common/proprietary/vendor/lib/libmmcamera_eebinparse.so:system/vendor/lib/libmmcamera_eebinparse.so \
     vendor/lge/g6-common/proprietary/vendor/lib/libmmcamera_eeprom_checksum.so:system/vendor/lib/libmmcamera_eeprom_checksum.so \
     vendor/lge/g6-common/proprietary/vendor/lib/libmmcamera_eeprom_util.so:system/vendor/lib/libmmcamera_eeprom_util.so \
@@ -668,6 +669,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/g6-common/proprietary/vendor/lib/libqomx_jpegdec.so:system/vendor/lib/libqomx_jpegdec.so \
     vendor/lge/g6-common/proprietary/vendor/lib/libqomx_jpegenc.so:system/vendor/lib/libqomx_jpegenc.so \
     vendor/lge/g6-common/proprietary/vendor/lib/libqomx_jpegenc_pipe.so:system/vendor/lib/libqomx_jpegenc_pipe.so \
+    vendor/lge/g6-common/proprietary/vendor/lib/libremosaic_daemon.so:system/vendor/lib/libremosaic_daemon.so \
     vendor/lge/g6-common/proprietary/vendor/lib64/libdovi.so:system/vendor/lib64/libdovi.so \
     vendor/lge/g6-common/proprietary/vendor/lib64/libmmcamera2_frame_algorithm.so:system/vendor/lib64/libmmcamera2_frame_algorithm.so \
     vendor/lge/g6-common/proprietary/vendor/lib64/libmmcamera2_is.so:system/vendor/lib64/libmmcamera2_is.so \
